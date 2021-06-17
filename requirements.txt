@@ -1,0 +1,9 @@
+coloredlogs==15.0.1
+greenlet==1.1.0
+humanfriendly==9.2
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+msgpack==1.0.2
+neovim==0.3.1
+netscape-bookmarks-file-parser @ git+https://github.com/FlyingWolFox/Netscape-Bookmarks-File-Parser.git@6a0f58d0a8637ac21703cb07c9a2ee2e2f6d4936
+pynvim==0.4.3

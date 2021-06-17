@@ -1,0 +1,24 @@
+# Awesome {{ tree.path }}
+
+{{ tree.header|default('', true) }}
+
+## Table of Contents
+
+{% for category in tree.children -%}
+- [{{ category.name }}](#{{ category.name }})
+{% endfor -%}
+
+{% for category in tree.children %}
+## <a name="{{ category.name }}"></a>{{ category.name }}
+
+{% for shortcut in category.shortcuts -%}
+- [{{ shortcut.name.split(':')[0]}}]({{ shortcut.href }}) -{{ shortcut.name.split(':')[1:] | join(':') }}
+{% endfor -%}
+{% endfor %}
+{% for shortcut in tree.shortcuts -%}
+- [{{ shortcut.name.split(':')[0]}}]({{ shortcut.href }}) -{{ shortcut.name.split(':')[1:] | join(':') }}
+{% endfor -%}
+
+{{ tree.footer|default('', true) }}
+
+Generated with love by [awesome-bookmarks](https://github.com/lgaggini/awesome-bookmarks).
